@@ -22,3 +22,5 @@ def create_app():
     app.register_blueprint(main_views.bp)
 
     return app
+
+# set FLASK_APP=pybo/__init__.py 어디가 실행파일인지 알려줘야 함.
