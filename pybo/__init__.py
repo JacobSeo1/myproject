@@ -16,10 +16,13 @@ def create_app():
     db.init_app(app)
     # Migrate에 app(Flask)과 db(SQLAlchemy) 등록
     migrate.init_app(app, db)
+    from . import models
 
     # 블루프린트 등록
-    from .views import main_views
+    from .views import main_views, question_views, answer_views
     app.register_blueprint(main_views.bp)
+    app.register_blueprint(question_views.bp)
+    app.register_blueprint(answer_views.bp)
 
     return app
 
