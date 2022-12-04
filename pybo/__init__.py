@@ -44,3 +44,4 @@ def create_app():
     return app
 
 # set FLASK_APP=pybo/__init__.py 어디가 실행파일인지 알려줘야 함.
+# flask --debug run 디버그 on 하고 실행
